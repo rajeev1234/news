@@ -1,0 +1,48 @@
+<div class="main__container" fxLayout="column">
+  <header class="main__header" fxLayoutAlign="center center" fxLayout="column">
+    <h1>Newsletter Generator</h1>
+    <input [(ngModel)]="news_subscribe.email" placeholder="Email"><br><br>
+    <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+    </div>
+    <button (click)=" uploadFileToActivity()">upload</button>
+    <button (click)=" registerUser()">Subcribe</button>
+    <h4>Generate your personalized Newsletter within minutes.</h4>
+    <a href="https://github.com/delsner/newsletter" class="cursor-pointer">
+      <img height="32" src="assets\images\GitHub.png">
+    </a>
+  </header>
+  <div class="main__content" fxLayoutAlign="center center" fxLayout="column">
+    <h1>Generator</h1>
+    <app-settings></app-settings>
+  </div>
+  <div class="main__supporters text-center padding--md" fxLayout="column">
+    <h1>Supporters</h1>
+    <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center center">
+      <div fxFlex class="padding--sm">
+        <a href="http://sharewood-forest.de" target="_blank">
+          <!--<img height="50" src="assets\images\swf.png"/>-->
+        </a>
+      </div>
+      <div fxFlex class="padding--sm">
+        <a href="http://www.bethanien-stiftung.de/" target="_blank">
+          <!--<img height="50" src="assets\images\bb.png"/>-->
+        </a>
+      </div>
+      <div fxFlex class="padding--sm">
+        <p>More to follow...</p>
+      </div>
+    </div>
+  </div>
+  <footer class="main__footer text-color-light padding--md" fxLayoutAlign="center center" fxLayout="column">
+    <h3>Newsletter Generator</h3>
+    <p>If you want to contribute or have an idea for the improvement of this tool, please feel free to <a
+      href="mailto:dvelsner@gmail.com">contact us.</a></p>
+    <p>
+      <small>&copy; 2018, work for films. com</small>
+    </p>
+  </footer>
+</div>
